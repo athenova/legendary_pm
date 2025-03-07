@@ -1,5 +1,5 @@
 from simple_blogger import CommonBlogger
-from simple_blogger.generators.OpenAIGenerator import OpenAITextGenerator
+from simple_blogger.generators.YandexGenerator import YandexImageGenerator
 from datetime import datetime
 from datetime import timedelta
 
@@ -36,8 +36,9 @@ class Project(CommonBlogger):
             review_chat_id=-1002374309134,
             production_chat_id='@verge_of_breakdown',
             first_post_date=datetime(2025, 3, 9),
+            #days_to_review=timedelta(2),
             days_between_posts=timedelta(7),
-            text_generator=OpenAITextGenerator(),
+            image_generator=YandexImageGenerator(folder_id="b1g8kgobin3d1usjbiq8"),
             topic_word_limit=100,
             **kwargs
         )
